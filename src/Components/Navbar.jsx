@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpened , setIsOpened] = useState(false)
   return (
     <>
-        <div className='h-[70px] w-full sticky bg-white mb-10 top-0 left-0 z-10 px-3 shadow-lg flex flex-col text-center justify-center md:mx-auto md:w-4/5 md:shadow-none'>
+        <div className='h-[70px] w-full sticky bg-white mb-10 top-0 left-0 z-10 px-2  shadow-lg flex flex-col text-center justify-center md:mx-auto md:w-4/5 md:shadow-none'>
           <div className='flex justify-between text-center relative'>
             <p className='text-3xl text-[#233348] font-semi-bold md:ml-[60px] md:shrink-0'> <span className='bg-[#fcb72b] font-bold text-3xl text-white px-3 py-1 rounded-3xl'>B</span> eBike</p>
               <ul className='hidden justify-between text-center text-[#7d7987] last-child:font-bold md:mr-[60px] md:flex'>
@@ -19,7 +19,7 @@ const Navbar = () => {
           </div>
 
           {/* Hamburger Menu */}
-          <div className={isOpened ? 'flex fixed z-50 text-xl right-10 top-5 md:hidden': 'flex absolute z-50 text-xl right-10 top-4 md:hidden'}>
+          <div className={isOpened ? 'flex fixed z-50 text-xl right-3 top-5 md:hidden': 'flex absolute z-50 text-xl right-10 top-4 md:hidden'}>
           <Hamburger
             color='#944d06'
             toggled={isOpened}

@@ -42,7 +42,7 @@ const Sectwo = () => {
             const {id, name, text, price, image} = data
             return(
               <SwiperSlide key={id}>
-              <div className='bg-[#ffffff] flex flex-col text-center justify-center shadow-md h-[350px] w-[300px] mx-auto p-4 md:mx-1'>
+              <div className='bg-[#ffffff] flex flex-col text-center justify-center shadow-md h-[350px] w-[270px] mx-auto p-4 md:mx-1'>
                 <div className=' pb-3 border-b-2 border-[#7d7987]'>
                   <h3 className='text-xl font-semibold'>{name}</h3>
                   <img className='mx-auto' src={image} alt="Bike" />
