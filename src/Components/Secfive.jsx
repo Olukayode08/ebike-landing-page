@@ -13,7 +13,7 @@ const Secfive = () => {
     
     
   <div>
-    <div className='max-w-md bg-[#fcb72b] p-7 rounded-lg mx-auto my-10'>
+    <div className='max-w-md bg-[#fcb72b] p-7 rounded-lg mx-auto my-5'>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
@@ -22,7 +22,6 @@ const Secfive = () => {
             prevEl: '.swiper-custom-navigation-prev',
             nextEl: '.swiper-custom-navigation-next',
       }}
-          // className='mySwiper'
     >
             {feedback.map(user =>(
                 <SwiperSlide className='' key={user.id}>
@@ -38,14 +37,14 @@ const Secfive = () => {
             ))}
     </Swiper>
     </div>
-      <div className='flex justify-center text-center gap-[30px] mt-8 '>
+      <div className='flex justify-center text-center mb-5 gap-[30px]'>
         <BsArrowLeft
-          className='swiper-custom-navigation swiper-custom-navigation-prev backNavigate'
-          size={35}
+          className='swiper-custom-navigation swiper-custom-navigation-prev backNavigate bg-[#fff] opacity-3 text-[#f2b72b] px-3 py-1 rounded-full'
+          size={55}
         />
         <BsArrowRight
-          className='swiper-custom-navigation swiper-custom-navigation-next frontNavigate'
-          size={35}
+          className='swiper-custom-navigation swiper-custom-navigation-next frontNavigate bg-[#fff] text-[#f2b72b] px-3 py-1 rounded-full'
+          size={55}
         />
       </div>
     </div>

@@ -20,9 +20,9 @@ const Secfour = () => {
                             <p className='flex text-center w-[70px] h-[27px] justify-center bg-gradient-to-r my-auto from-[#ffbd37] to-[#e5e7eb] rounded-full'>Order</p>
                         </div>
                     </div>
-                    <div className='w-[100%] flex flex-col justify-center text-center max-w-md md:text-left'>
-                        <h1 className='text-[30px] text-[#7d7987]'>Hybrid Bikes</h1>
-                        <p className='text-[19px] py-5 text-[#7d7987]'>Dummy Text progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver</p>
+                    <div className='w-[100%] flex flex-col justify-center text-center mx-auto max-w-md'>
+                        <h1 className='text-[27px] font-bold'>Hybrid Bikes</h1>
+                        <p className='text-[18px] py-5 text-[#7d7987]'>Dummy Text progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver</p>
                         <p className='border-2 border-[#fcb72b] text-[18px] text-[#fcb72b] mx-auto max-w-fit px-10 py-2 rounded-full'>Learn more</p>
                     </div>
                 </div>
