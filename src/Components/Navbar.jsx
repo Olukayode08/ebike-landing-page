@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { navData } from '../data'
-import { Twirl as Hamburger } from 'hamburger-react'
+import { Sling as Hamburger } from 'hamburger-react'
 const Navbar = () => {
   const [isOpened , setIsOpened] = useState(false)
   return (
@@ -9,17 +9,17 @@ const Navbar = () => {
           <div className='flex justify-between text-center relative'>
             <p className='text-3xl text-[#233348] font-semi-bold md:ml-[60px] md:shrink-0'> <span className='bg-[#fcb72b] font-bold text-3xl text-white px-3 py-1 rounded-3xl'>B</span> eBike</p>
               <ul className='hidden justify-between text-center text-[#7d7987] last-child:font-bold md:mr-[60px] md:flex'>
-                {navData.map((data)=>{
-                const {id, name, link} = data
-                return(
-                  <li className='text-center text-[16px] shrink-0 my-1 px-2 justify-center' key={id}><a href={link}>{name}</a></li>
-                )
-                })}
+                <li className='text-center font-bold text-[16px] shrink-0 my-1 px-2 justify-center'><a href='#'>Products</a></li>
+                <li className='text-center text-[16px] shrink-0 my-1 px-2 justify-center'><a href='#'>Bike type</a></li>
+                <li className='text-center text-[16px] shrink-0 my-1 px-2 justify-center'><a href='#'>About us</a></li>
+                <li className='text-center text-[16px] shrink-0 my-1 px-2 justify-center'><a href='#'>Testimonial</a></li>
+                <li className='text-center text-[16px] shrink-0 my-1 px-2 justify-center'><a href='#'>Products</a></li>
+                <li className='text-center text-[16px] shrink-0 my-1 px-2 justify-center'><a href='#'>Contact</a></li>
               </ul>
           </div>
 
           {/* Hamburger Menu */}
-          <div className={isOpened ? 'flex fixed z-50 text-xl right-3 top-5 md:hidden': 'flex absolute z-50 text-xl right-10 top-4 md:hidden'}>
+          <div className={isOpened ? 'flex fixed z-50 text-xl right-5 top-5 md:hidden': 'flex absolute z-50 text-xl right-5 top-4 md:hidden'}>
           <Hamburger
             color='#944d06'
             toggled={isOpened}

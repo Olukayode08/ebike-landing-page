@@ -10,8 +10,6 @@ import { feedback } from '../data';
 
 const Secfive = () => {
   return (
-    
-    
   <div>
     <div className='max-w-md bg-[#fcb72b] p-7 rounded-lg mx-auto my-5'>
     <Swiper
