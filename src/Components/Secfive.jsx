@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css';
 import { feedback } from '../data';
 import {motion} from 'framer-motion'
-const containerVariant ={
+const imageVariant ={
   hidden: {
     y: '100vh',
     opacity: '0'
@@ -15,18 +15,27 @@ const containerVariant ={
     y: 0,
     opacity: 1,
     transition: {
-      type: 'string', duration: 1, stiffness: 50, staggerChildren: 0.5
+      type: 'string', duration: 1, stiffness: 50, duration: 0.4
     }
   }
 }
-
-
+const textVariant ={
+  hidden: {
+    y: '100vh',
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'string', stiffness: 50, duration: 1, 
+    }
+  }
+}
 const Secfive = () => {
   return (
-  <motion.div
-  variants={containerVariant}
-  initial= 'hidden'
-  animate = 'visible'
+  <div
+
   >
     <div className='max-w-md bg-[#fcb72b] p-7 rounded-lg mx-auto my-5'>
     <Swiper
@@ -40,14 +49,31 @@ const Secfive = () => {
     >
             {feedback.map(user =>(
                 <SwiperSlide className='' key={user.id}>
-                    <div className='flex text-center justify-center flex-col'>
+                    <motion.div
+                      transition={{staggerChildren: 0.3}}
+                      initial= 'hidden'
+                      whileInView = 'visible'
+                      viewport={{once:false, amount: 0.1}}
+                      className='flex text-center justify-center flex-col'>
                         <div>
-                            <img className='border-2 border-white rounded-full mx-auto' src={user.image} alt="Biker" />
-                            <p className='text-[#fff] text-[23px] font-semi-bold shrink-0'>{user.name}</p>
-                            <p className='text-[#fff] text-[20px]'>{user.position}</p>
+                            <motion.img
+                            variants={imageVariant}
+                            className='border-2 border-white rounded-full mx-auto' src={user.image} alt="Biker" 
+                            />
+                            <motion.p 
+                              variants={imageVariant}
+                              className='text-[#fff] text-[23px] font-semi-bold shrink-0'>{user.name}
+                            </motion.p>
+                            <motion.p 
+                              variants={textVariant}
+                              className='text-[#fff] text-[20px]'>{user.position}
+                            </motion.p>
                         </div>
-                        <p className='text-[#ffffff]'>{user.text}</p>
-                    </div>
+                        <motion.p 
+                          variants={textVariant}
+                          className='text-[#ffffff]'>{user.text}
+                        </motion.p>
+                    </motion.div>
                 </SwiperSlide>
             ))}
     </Swiper>
@@ -62,7 +88,7 @@ const Secfive = () => {
           size={55}
         />
       </div>
-    </motion.div>
+    </div>
   );
 }
 export default Secfive
