@@ -3,14 +3,31 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {BsArrowLeft, BsArrowRight} from 'react-icons/bs';
 import 'swiper/css/navigation';
-
 import 'swiper/css';
 import { feedback } from '../data';
+import {motion} from 'framer-motion'
+const containerVariant ={
+  hidden: {
+    y: '100vh',
+    opacity: '0'
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'string', duration: 1, stiffness: 50, staggerChildren: 0.5
+    }
+  }
+}
 
 
 const Secfive = () => {
   return (
-  <div>
+  <motion.div
+  variants={containerVariant}
+  initial= 'hidden'
+  animate = 'visible'
+  >
     <div className='max-w-md bg-[#fcb72b] p-7 rounded-lg mx-auto my-5'>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -45,7 +62,7 @@ const Secfive = () => {
           size={55}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default Secfive

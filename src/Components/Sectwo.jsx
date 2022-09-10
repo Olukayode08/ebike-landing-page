@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css';
+import {motion} from 'framer-motion'
 
 const Sectwo = () => {
   return (
@@ -12,8 +13,6 @@ const Sectwo = () => {
     <div className='relative w-4/5 mx-auto my-10'>
     <Swiper 
     modules={[Navigation, Pagination, Scrollbar, A11y]}
-      // spaceBetween={50}
-      // slidesPerView={{}}
       breakpoints={{
         0: {
           slidesPerView: 1,
@@ -37,7 +36,7 @@ const Sectwo = () => {
     >
 
 
-    <div  className='flex flex-col text-center justify-center mx-auto md:flex-row'>
+    <div className='flex flex-col text-center justify-center mx-auto md:flex-row'>
         {bikes.map((data)=>{
             const {id, name, text, price, image} = data
             return(
