@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Helmet from '../bikeImages/57535-helmet-requirement 1 (1).png'
 import {AiOutlineSearch} from 'react-icons/ai'
-import {motion, AnimatePresence} from 'framer-motion'
+import {motion} from 'framer-motion'
 
   const imageVariant = {
     initial:{
@@ -25,7 +25,7 @@ import {motion, AnimatePresence} from 'framer-motion'
    }
    const dummyVariant = {
      initial: {
-       y: '-100hv',
+       y: '-100vh',
        opacity: 0
      },
      final: {
