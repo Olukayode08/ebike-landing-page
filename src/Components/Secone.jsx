@@ -3,6 +3,8 @@ import Helmet from '../bikeImages/57535-helmet-requirement 1 (1).png'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {motion} from 'framer-motion'
 
+        // ease: [0.25, 0.1, 0.25, 1],
+
   const imageVariant = {
     initial:{
       x: 200,
@@ -69,7 +71,7 @@ const Secone  = () => {
         </motion.div>
       </motion.div>
       <motion.div
-      variants={imageVariant}
+        variants={imageVariant}
         initial='initial'
         whileInView='final'
         viewport={{once: false, amount: 0.1}}

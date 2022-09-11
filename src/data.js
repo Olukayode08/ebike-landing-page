@@ -119,7 +119,7 @@ export const feedback = [
     id: 17,
     image: Person,
     text: 'Dummy text progressive, and affordable healthcare, accessible on mobile and online for everyone',
-    position: 'INtern rider',
+    position: 'Intern rider',
     name: 'Mia Toretto',
   },
   {
