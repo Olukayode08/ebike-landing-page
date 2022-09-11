@@ -4,7 +4,7 @@ import bike from '../bikeImages/bikeone.png'
 const Secthree = () => {
   return (
     <>
-        <div className='w-4/5 mx-auto my-[100px]'>
+        <div className='w-4/5 mx-auto my-[50px]'>
         <h1 className='text-[20px] text-center text-[#233348] font-bold md:text-left'>Other Types Of Bikes</h1>
         <div className='flex justify-center text-center md:flex md:flex-row'>
                 <div className='flex justify-center text-center flex-col'>
