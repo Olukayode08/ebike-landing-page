@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
-import { navData } from '../data'
 import { Sling as Hamburger } from 'hamburger-react'
-import {motion} from 'framer-motion'
-
+import {motion, AnimatePresence} from 'framer-motion'
 
 const logoVariant = {
     hidden:{
@@ -24,23 +22,31 @@ const textVariant ={
     x: 0,
     opacity: 1,
     transition: {
-      type: 'string', stiffness: 50, duration: 1, 
+      type: 'string', stiffness: 10, duration: 1, 
     }
   }
 }
 const mobileVariant ={
   hidden: {
-    y: '-100vh',
+    scale: 0,
     opacity: 0,
   },
   visible: {
-    y: 0,
+    scale: 1,
     opacity: 1,
     transition: {
-      type: 'string', stiffness: 50, duration: 2, 
+      type: 'string', stiffness: 10, duration: 1, 
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0,
+    transition: {
+      type: 'string', stiffness: 10, duration: 1, 
+      },
     }
   }
-}
+  
 const Navbar = () => {
   const [isOpened , setIsOpened] = useState(false)
   return (
@@ -80,15 +86,45 @@ const Navbar = () => {
           </motion.div>
 
           {/* Mobile Navigation */}
-          <motion.div variants={mobileVariant} className={isOpened ? 'transition-all ease-in delay-[0.3s] h-screen w-full z-40 fixed top-0 bg-[#fcb72b] left-0 flex flex-col text-center justify-center md:hidden'   : 'transition-all ease-out delay-[0s] absolute left-[-100%] md:hidden'}>
+          {isOpened && (
+          <AnimatePresence>
+          <div 
+            className={isOpened ? 'transition-all ease-in delay-[0.3s] h-screen w-full z-40 fixed top-0 bg-[#fcb72b] left-0 flex flex-col text-center justify-center md:hidden'   : 'transition-all ease-out delay-[0s] absolute left-[-100%] md:hidden'}>
             <ul>
-                  <li className='text-white text-[18px] my-5'><a href='#'>Products</a></li>
-                  <li className='text-white text-[18px] my-5'><a href='#'>Bike type</a></li>
-                  <li className='text-white text-[18px] my-5'><a href='#'>About us</a></li>
-                  <li className='text-white text-[18px] my-5'><a href='#'>Testimonial</a></li>
-                  <li className='text-white text-[18px] my-5'><a href='#'>Contact</a></li>
+              <motion.li 
+              variants={mobileVariant}
+              initial='hidden'
+              animate='visible'
+              exit='exit'
+              className='text-white font-bold text-[18px] my-5'><a href='#'>Products</a></motion.li>
+              <motion.li 
+              variants={mobileVariant}
+              initial='hidden'
+              animate='visible'
+              exit='exit'
+              className='text-white text-[18px] my-5'><a href='#'>Bike type</a></motion.li>
+              <motion.li 
+              variants={mobileVariant}
+              initial='hidden'
+              animate='visible'
+              exit='exit'
+              className='text-white text-[18px] my-5'><a href='#'>About us</a></motion.li>
+              <motion.li 
+              variants={mobileVariant}
+              initial='hidden'
+              animate='visible'
+              exit='exit'
+              className='text-white text-[18px] my-5'><a href='#'>Testimonial</a></motion.li>
+              <motion.li 
+              variants={mobileVariant}
+              initial='hidden'
+              animate='visible'
+              exit='exit'
+              className='text-white text-[18px] my-5'><a href='#'>Contact</a></motion.li>
             </ul>
-          </motion.div>
+          </div>
+          </AnimatePresence>
+          )}
         </motion.div>
     </>
   )

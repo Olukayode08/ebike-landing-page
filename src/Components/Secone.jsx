@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Helmet from '../bikeImages/57535-helmet-requirement 1 (1).png'
 import {AiOutlineSearch} from 'react-icons/ai'
-import {motion} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 
   const imageVariant = {
     initial:{
@@ -12,7 +12,7 @@ import {motion} from 'framer-motion'
       x:0,
       opacity:1
     },
-    transition:{ bounce: 0.4 , delay: 2 , staggerChildren:0.5}
+    transition:{ type: 'spring', stiffness: 10 , duration: 1 }
   }
    const textVariant = {
      initial: {
@@ -21,7 +21,7 @@ import {motion} from 'framer-motion'
      final: {
        x: 0,
      },
-     transition: { type: 'spring', stiffness: 50, duration:1 },
+     transition: { type: 'spring', stiffness: 10, duration:1 },
    }
    const dummyVariant = {
      initial: {
@@ -32,8 +32,9 @@ import {motion} from 'framer-motion'
        y: 0,
        opacity:1
      },
-     transition: { type: 'spring', stiffness: 50, duration:2 },
+     transition: { type: 'spring', stiffness: 10, duration:1 },
    }
+
 
 
 const Secone  = () => {
@@ -46,6 +47,7 @@ const Secone  = () => {
         transition={{ staggerChildren: 0.3 }}
         initial='initial'
         whileInView={'final'}
+        exit = {{opacity: 0, duration: 2}}
         viewport={{once:false , amount:0.1}}
       >
         <motion.h1 
@@ -66,7 +68,6 @@ const Secone  = () => {
           <p className='flex text-center absolute top-3 right-2 w-[70px] h-[27px] justify-center bg-gradient-to-r my-auto from-[#ffbd37] to-[#e5e7eb] shrink-0 rounded-full'>Find</p>
         </motion.div>
       </motion.div>
-
       <motion.div
       variants={imageVariant}
         initial='initial'

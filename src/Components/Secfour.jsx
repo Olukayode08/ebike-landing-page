@@ -12,7 +12,7 @@ const imageVariant = {
         x: 0,
         opacity: 1,
         transition: {
-            type: 'spring', stiffness: 50, delay: 1
+            type: 'spring', stiffness: 10, duration: 1
         }
     }
 }
@@ -25,20 +25,20 @@ const imageTextVariant = {
         y: 0,
         opacity: 1,
         transition: {
-            type: 'spring', stiffness: 50, duration: 0.4
+            type: 'spring', stiffness: 10, duration: 1
         }
     }
 }
 const textVariant = {
     hidden: {
-        y: '-100vh',
+        scale: 0,
         opacity: 0,
     },
     visible: {
-        y: 0,
+        scale: 1,
         opacity: 1,
         transition: {
-            type: 'spring', stiffness: 50, duration: 0.4
+            type: 'spring', stiffness: 10, duration: 0.4
         }
     }
 }

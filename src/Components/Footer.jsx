@@ -3,14 +3,14 @@ import {motion} from 'framer-motion'
 
 const headerVariant = {
     hidden:{
-        x: '-100vw',
+        scale: 0,
         opacity: 0
     },
     visible: {
-        x: 0,
+        scale: 1,
         opacity: 1,
     },
-    transition: {type: 'tween', duration: 1}
+    transition: {type: 'tween', duration: 2}
 }
 const textVariant = {
     hidden:{
@@ -21,7 +21,7 @@ const textVariant = {
         y: 0,
         opacity: 1,
     },
-    transition: {type: 'spring', stiffness: 20, duration: 1}
+    transition: {type: 'spring', stiffness: 20, duration: 2}
 } 
 
 const Footer = () => {
