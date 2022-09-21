@@ -15,7 +15,7 @@ const imageVariant ={
     y: 0,
     opacity: 1,
     transition: {
-      type: 'string', duration: 1, stiffness: 50, duration: 0.4
+      type: 'string', duration: 1, stiffness: 50
     }
   }
 }
