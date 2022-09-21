@@ -14,16 +14,16 @@ import {motion} from 'framer-motion'
       x:0,
       opacity:1
     },
-    transition:{ type: 'spring', stiffness: 10 , duration: 1 }
+    transition:{ type: 'spring', stiffness: 50 , duration: 0.4 }
   }
    const textVariant = {
      initial: {
-       x: '-100vw',
+       x: -100,
      },
      final: {
        x: 0,
      },
-     transition: { type: 'spring', stiffness: 10, duration:1 },
+     transition: { type: 'spring', stiffness: 50, duration:0.4 },
    }
    const dummyVariant = {
      initial: {
@@ -34,7 +34,7 @@ import {motion} from 'framer-motion'
        y: 0,
        opacity:1
      },
-     transition: { type: 'spring', stiffness: 10, duration:1 },
+     transition: { type: 'spring', stiffness: 50, duration:0.4 },
    }
 
 
@@ -42,7 +42,7 @@ import {motion} from 'framer-motion'
 const Secone  = () => {
   return (
     <>
-    <div className='w-full mx-auto md:w-4/5'>
+    <div className='mx-auto md:w-4/5'>
     <div className='flex flex-col justify-between text-center md:flex-row'>
       <motion.div 
         className='w-[100%] px-4 flex flex-col justify-center text-center md:text-left'
@@ -72,9 +72,6 @@ const Secone  = () => {
       </motion.div>
       <motion.div
         variants={imageVariant}
-        initial='initial'
-        whileInView='final'
-        viewport={{once: false, amount: 0.1}}
         className='w-[100%] flex justify-center text-center' 
       >
         <img src={Helmet} alt="Bike" className='mb-[90px]'/>

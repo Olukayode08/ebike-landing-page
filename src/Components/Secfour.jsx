@@ -5,27 +5,27 @@ import {motion} from 'framer-motion'
 
 const imageVariant = {
     hidden: {
-        x: '-100vw',
+        x: -200,
         opacity: 0,
     },
     visible: {
         x: 0,
         opacity: 1,
         transition: {
-            type: 'spring', stiffness: 10, duration: 1
+            type: 'spring', stiffness: 50, duration: 1
         }
     }
 }
 const imageTextVariant = {
     hidden: {
-        y: '100vh',
+        y: -200,
         opacity: 0,
     },
     visible: {
         y: 0,
         opacity: 1,
         transition: {
-            type: 'spring', stiffness: 10, duration: 1
+            type: 'spring', stiffness: 50, duration: 1
         }
     }
 }
@@ -38,7 +38,7 @@ const textVariant = {
         scale: 1,
         opacity: 1,
         transition: {
-            type: 'spring', stiffness: 10, duration: 0.4
+            type: 'spring', stiffness: 50, duration: 0.4
         }
     }
 }

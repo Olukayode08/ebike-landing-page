@@ -4,25 +4,27 @@ import {motion, AnimatePresence} from 'framer-motion'
 
 const logoVariant = {
     hidden:{
-        x: '-100vw',
+        x: -200,
         opacity: 0
     },
     visible: {
         x: 0,
         opacity: 1,
     },
-    transition: {type: 'tween', duration: 1}
+    transition: {
+      type: 'string', stiffness: 50, duration: 1,
+    }
 }
 const textVariant ={
   hidden: {
-    x: '100vw',
+    x: 200,
     opacity: 0,
   },
   visible: {
     x: 0,
     opacity: 1,
     transition: {
-      type: 'string', stiffness: 10, duration: 1, 
+      type: 'string', stiffness: 50, duration: 1, 
     }
   }
 }
@@ -35,7 +37,7 @@ const mobileVariant ={
     scale: 1,
     opacity: 1,
     transition: {
-      type: 'string', stiffness: 10, duration: 1, 
+      type: 'string', stiffness: 50, duration: 1, 
     },
   },
   exit: {
